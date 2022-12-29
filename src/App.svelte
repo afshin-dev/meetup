@@ -1,7 +1,7 @@
 <script>
   import svelteLogo from './assets/svelte.svg'
-  import Emmit from './emmit/Emmit.svelte';
   import Counter from './lib/Counter.svelte'
+  import Slot from './slots/Slot.svelte';
 
 </script>
 
@@ -21,7 +21,7 @@
   </div>
 
   <main>
-      <Emmit></Emmit>
+      <Slot></Slot>
   </main>
 </main>
 
