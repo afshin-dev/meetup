@@ -1,7 +1,7 @@
 <script>
   import svelteLogo from './assets/svelte.svg'
   import Counter from './lib/Counter.svelte'
-  import Slot from './slots/Slot.svelte';
+  import Bind from './bind-and-input/Bind.svelte';
 
 </script>
 
@@ -20,10 +20,10 @@
     <Counter />
   </div>
 
-  <main>
-      <Slot></Slot>
-  </main>
-</main>
+  <section>
+    <Bind></Bind>
+  </section>
+</main> 
 
 <style>
   .logo {
