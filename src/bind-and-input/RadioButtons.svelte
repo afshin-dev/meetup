@@ -2,15 +2,17 @@
     import {onMount, createEventDispatcher} from "svelte" ;
     export let inputs ;
 
-    let selected = [] ;
+    let selected = null ;
     const dispatch = createEventDispatcher() ;
 
     onMount(() => {
-        if(!Array.isArray(inputs)){
-            console.warn("inputs must be a array")
+        if (!Array.isArray(inputs)) {
+            console.warn("input must be array")
         }
     })
-    function finishSelecting() {
+
+    function done() {
+        // console.log(selected);
         dispatch("selected", selected) ;
     }
 </script>
@@ -26,8 +28,8 @@
     {#each inputs as input (Math.random().toString()) }
         <div>
             <label for="">{input}</label>
-            <input type="checkbox" name="same" value={input} bind:group={selected} >
+            <input type="radio" name="same" bind:group={selected} value={input}>
         </div>
     {/each}
-    <button on:click={finishSelecting}>finish selecting</button>
+    <button on:click={done}>done</button>
 </div>
