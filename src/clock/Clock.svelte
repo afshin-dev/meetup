@@ -1,8 +1,13 @@
 <script>
     import clock from "./clock-store";
+    import {onDestroy} from "svelte"
     let time = new Date() ;
-    clock.subscribe((newTime) => {
+    const unsub = clock.subscribe((newTime) => {
         time = newTime
+    })
+
+    onDestroy(() => {
+        unsub()
     })
 </script>
 

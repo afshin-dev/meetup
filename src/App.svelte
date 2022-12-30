@@ -1,6 +1,5 @@
 <script>
   import svelteLogo from './assets/svelte.svg'
-  import Clock from './clock/Clock.svelte';
   import Counter from './lib/Counter.svelte';
 </script>
 
@@ -20,7 +19,6 @@
   </div>
 
   <section>
-    <Clock></Clock>
   </section>
 </main> 
 
