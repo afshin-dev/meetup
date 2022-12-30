@@ -1,12 +1,17 @@
 <script>
+  import {onDestroy} from "svelte"
   import Decrementor from "./Decrementor.svelte";
   import Incrementor from "./Incrementor.svelte";
   import counter from "./store"; 
   let countValue  ;
 
-  counter.subscribe(count => {
+  const unsubscribe = counter.subscribe(count => {
     countValue = count ;
   })
+
+  onDestroy(() => {
+    unsubscribe() ;
+  });
 
    
 </script>
