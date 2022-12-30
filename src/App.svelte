@@ -1,8 +1,6 @@
 <script>
   import svelteLogo from './assets/svelte.svg'
-  import Counter from './lib/Counter.svelte'
-  import Bind from './bind-and-input/Bind.svelte';
-
+  import Counter from "./counter-store/Counter.svelte" ;
 </script>
 
 <main>
@@ -17,11 +15,10 @@
   <h1>Vite + Svelte</h1>
 
   <div class="card">
-    <Counter />
   </div>
 
   <section>
-    <Bind></Bind>
+    <Counter></Counter>
   </section>
 </main> 
 
