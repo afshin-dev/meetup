@@ -1,0 +1,8 @@
+div {
+    margin-top: 1rem;
+    color: black; 
+    background-color: rgb(249, 255, 131);
+}
+body      {
+    box-sizing: border-box;
+}

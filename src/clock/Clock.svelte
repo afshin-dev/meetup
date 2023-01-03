@@ -8,7 +8,7 @@
 
     onDestroy(() => {
         unsub()
-    })
+    }) 
 </script>
 
 <style>
